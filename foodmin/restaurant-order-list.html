@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Foodmin : Order List</title>
+	
+	<!-- ================= Favicon ================== -->
+    <!-- Standard -->
+    <link rel="shortcut icon" href="http://placehold.it/64.png/000/fff">
+    <!-- Retina iPad Touch Icon-->
+    <link rel="apple-touch-icon" sizes="144x144" href="http://placehold.it/144.png/000/fff">
+    <!-- Retina iPhone Touch Icon-->
+    <link rel="apple-touch-icon" sizes="114x114" href="http://placehold.it/114.png/000/fff">
+    <!-- Standard iPad Touch Icon--> 
+    <link rel="apple-touch-icon" sizes="72x72" href="http://placehold.it/72.png/000/fff">
+    <!-- Standard iPhone Touch Icon--> 
+    <link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
+	
+	<!-- Styles -->
+    <link href="assets/css/lib/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/lib/mmc-chat.css" rel="stylesheet" />
+    <link href="assets/css/lib/sidebar.css" rel="stylesheet">
+    <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/lib/unix.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
+        <div class="nano">
+            <div class="nano-content">
+                <ul>
+					<li class="label">MY RESTAURANT</li>
+                    <li ><a href="index.html"><i class="ti-home"></i> Dashboard </a></li>		
+					<li><a class="sidebar-sub-toggle"><i class="ti-cup"></i> Menu <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                        <ul>
+                            <li><a href="restaurant-menu-three.html">View Menu</a></li>
+                            <li><a href="restaurant-upload-menu.html">Edit Menu</a></li>
+                        </ul>
+                    </li>
+                    <li ><a href="restaurant-upload-menu.html"><i class="ti-cup"></i> Discounts </a></li>					
+                    <li class="active"><a href="restaurant-order-list.html"><i class="ti-cup"></i> Orders </a></li>	
+				
+                            <li><a href="page-login.html">Login</a></li>
+                            <li><a href="page-register.html">Register</a></li>
+                				
+                </ul>
+            </div>
+        </div>
+    </div><!-- /# sidebar -->
+
+
+
+
+    <div class="header">
+        <div class="pull-left">
+            <div class="logo"><a href="index.html"><span>ProfApp</span></a></div>
+            <div class="hamburger sidebar-toggle">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+        </div>
+    </div>
+
+    
+	
+    <div class="content-wrap">
+        <div class="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8 p-0">
+                        <div class="page-header">
+                            <div class="page-title">
+                                <h1>Dashboard 1</h1>
+                            </div>
+                        </div>
+                    </div><!-- /# column -->
+                    <div class="col-lg-4 p-0">
+                        <div class="page-header">
+                            <div class="page-title">
+                                <ol class="breadcrumb text-right">
+                                    <li><a href="#">Dashboard</a></li>
+                                    <li class="active">Blank</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div><!-- /# column -->
+                </div><!-- /# row -->
+                <div class="main-content">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card alert">
+                                <div class="order-list-item">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>Customer</th>
+                                            <th>Order ID</th>
+                                            <th>Menu Name</th>
+                                            <th>Price</th>
+                                            <th>Rating</th>
+                                            <th>Quantity</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>Saiful Islam</td>
+                                            <td>#8546677</td>
+                                            <td>Hot Dog</td>
+                                            <td><button type="button" class="btn btn-success btn-rounded">$29</button></td>
+                                            <td><div class="full-stars-only"></div></td>
+                                            <td><button type="button" class="btn btn-primary btn-rounded">100</button></td>
+                                            <td><button type="button" class="btn btn-success btn-rounded">Paid</button></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Jannatul Mariam</td>
+                                            <td>#8546678</td>
+                                            <td>Chicken Biryani</td>
+                                            <td><button type="button" class="btn btn-success btn-rounded">$30</button></td>
+                                            <td><div class="half-full-stars"></div></td>
+                                            <td><button type="button" class="btn btn-primary btn-rounded">105</button></td>
+                                            <td><button type="button" class="btn btn-warning btn-rounded">Pending</button></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Anik Hasan</td>
+                                            <td>#8546679</td>
+                                            <td>Chicken Fried Rice</td>
+                                            <td><button type="button" class="btn btn-success btn-rounded">$31</button></td>
+                                            <td><div class="full-stars-only"></div></td>
+                                            <td><button type="button" class="btn btn-primary btn-rounded">110</button></td>
+                                            <td><button type="button" class="btn btn-primary btn-rounded">Failed</button></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>John Doe</td>
+                                            <td>#8546680</td>
+                                            <td>Crispy Chicken Salt</td>
+                                            <td><button type="button" class="btn btn-success btn-rounded">$32</button></td>
+                                            <td><div class="full-stars-only"></div></td>
+                                            <td><button type="button" class="btn btn-primary btn-rounded">120</button></td>
+                                            <td><button type="button" class="btn btn-success btn-rounded">Paid</button></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Micheal Qin</td>
+                                            <td>#8546681</td>
+                                            <td>Chilli Chicken</td>
+                                            <td><button type="button" class="btn btn-success btn-rounded">$34</button></td>
+                                            <td><div class="half-full-stars"></div></td>
+                                            <td><button type="button" class="btn btn-primary btn-rounded">130</button></td>
+                                            <td><button type="button" class="btn btn-warning btn-rounded">Pending</button></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Ishfaque Akash</td>
+                                            <td>#8546682</td>
+                                            <td>Paneer Butter Masala</td>
+                                            <td><button type="button" class="btn btn-success btn-rounded">$35</button></td>
+                                            <td><div class="full-stars-only"></div></td>
+                                            <td><button type="button" class="btn btn-primary btn-rounded">150</button></td>
+                                            <td><button type="button" class="btn btn-primary btn-rounded">Failed</button></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Jannatul Tasnim</td>
+                                            <td>#8546683</td>
+                                            <td>Egg Fried Rice</td>
+                                            <td><button type="button" class="btn btn-success btn-rounded">$36</button></td>
+                                            <td><div class="full-stars-only"></div></td>
+                                            <td><button type="button" class="btn btn-primary btn-rounded">160</button></td>
+                                            <td><button type="button" class="btn btn-success btn-rounded">Paid</button></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>John Cina</td>
+                                            <td>#8546684</td>
+                                            <td>Sweet Corn Soup</td>
+                                            <td><button type="button" class="btn btn-success btn-rounded">$37</button></td>
+                                            <td><div class="half-full-stars"></div></td>
+                                            <td><button type="button" class="btn btn-primary btn-rounded">175</button></td>
+                                            <td><button type="button" class="btn btn-warning btn-rounded">Pending</button></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Azad Rahman</td>
+                                            <td>#8546685</td>
+                                            <td>Clear Soup</td>
+                                            <td><button type="button" class="btn btn-success btn-rounded">$38</button></td>
+                                            <td><div class="full-stars-only"></div></td>
+                                            <td><button type="button" class="btn btn-primary btn-rounded">185</button></td>
+                                            <td><button type="button" class="btn btn-primary btn-rounded">Failed</button></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+							</div><!-- /# card -->
+						</div><!-- /# column -->
+					</div><!-- /# row -->
+                </div><!-- /# main content -->
+            </div><!-- /# container-fluid -->
+        </div><!-- /# main -->
+    </div><!-- /# content wrap -->
+
+    <script src="assets/js/lib/jquery.min.js"></script><!-- jquery vendor -->
+    <script src="assets/js/lib/jquery.nanoscroller.min.js"></script><!-- nano scroller -->
+    <script src="assets/js/lib/sidebar.js"></script><!-- sidebar -->
+    <script src="assets/js/lib/bootstrap.min.js"></script><!-- bootstrap -->
+    <script src="assets/js/lib/mmc-common.js"></script>
+    <script src="assets/js/lib/mmc-chat.js"></script>
+    <script src="assets/js/lib/rating1/jRate.min.js"></script><!-- scripit init-->
+    <script src="assets/js/lib/rating1/jRate.init.js"></script><!-- scripit init-->
+    <script src="assets/js/scripts.js"></script><!-- scripit init-->
+</body>
+
+</html>
