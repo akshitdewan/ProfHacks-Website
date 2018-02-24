@@ -1,0 +1,22 @@
+{
+  "name": "profhacks-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akshitdewan/ProfHacks-Website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akshitdewan/ProfHacks-Website/issues"
+  },
+  "homepage": "https://github.com/akshitdewan/ProfHacks-Website#readme",
+  "dependencies": {
+    "firebase": "^4.10.1"
+  }
+}

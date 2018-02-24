@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Foodmin : Order List</title>
+    <title>ProfApps : Orders</title>
 	
 	<!-- ================= Favicon ================== -->
     <!-- Standard -->
@@ -38,17 +38,19 @@
                 <ul>
 					<li class="label">MY RESTAURANT</li>
                     <li ><a href="index.html"><i class="ti-home"></i> Dashboard </a></li>		
-					<li><a class="sidebar-sub-toggle"><i class="ti-cup"></i> Menu <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+					<!--<li><a class="sidebar-sub-toggle"><i class="ti-cup"></i> Menu <span class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
                             <li><a href="restaurant-menu-three.html">View Menu</a></li>
                             <li><a href="restaurant-upload-menu.html">Edit Menu</a></li>
                         </ul>
-                    </li>
-                    <li ><a href="restaurant-upload-menu.html"><i class="ti-cup"></i> Discounts </a></li>					
+                    </li>-->
+                    <li ><a href="restaurant-boxes.html"><i class="ti-cup"></i> Boxes </a></li>
+
+                    <li  class="active"><a href="restaurant-order-list.html"><i class="ti-gallery"></i> Orders </a></li>	<!--				
                     <li class="active"><a href="restaurant-order-list.html"><i class="ti-cup"></i> Orders </a></li>	
 				
                             <li><a href="page-login.html">Login</a></li>
-                            <li><a href="page-register.html">Register</a></li>
+                            <li><a href="page-register.html">Register</a></li>-->
                 				
                 </ul>
             </div>
@@ -78,7 +80,7 @@
                     <div class="col-lg-8 p-0">
                         <div class="page-header">
                             <div class="page-title">
-                                <h1>Dashboard 1</h1>
+                                <h1>Orders</h1>
                             </div>
                         </div>
                     </div><!-- /# column -->
@@ -86,8 +88,8 @@
                         <div class="page-header">
                             <div class="page-title">
                                 <ol class="breadcrumb text-right">
-                                    <li><a href="#">Dashboard</a></li>
-                                    <li class="active">Blank</li>
+                                    <li><a href="#">Orders</a></li>
+                                    <li class="active">ProfApp</li>
                                 </ol>
                             </div>
                         </div>
@@ -103,11 +105,11 @@
                                         <tr>
                                             <th>Customer</th>
                                             <th>Order ID</th>
-                                            <th>Menu Name</th>
+                                            <th>Box</th>
                                             <th>Price</th>
-                                            <th>Rating</th>
+                                            <!--<th>Rating</th>-->
                                             <th>Quantity</th>
-                                            <th>Status</th>
+                                            <th>Completed?</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -115,10 +117,10 @@
                                             <td>Saiful Islam</td>
                                             <td>#8546677</td>
                                             <td>Hot Dog</td>
-                                            <td><button type="button" class="btn btn-success btn-rounded">$29</button></td>
-                                            <td><div class="full-stars-only"></div></td>
+                                            <td><button type="button" class="btn btn-success btn-rounded">$29</button></td><!--
+                                            <td><div class="full-stars-only"></div></td>-->
                                             <td><button type="button" class="btn btn-primary btn-rounded">100</button></td>
-                                            <td><button type="button" class="btn btn-success btn-rounded">Paid</button></td>
+                                            <td><button type="button" class="customcheckbox btn btn-warning btn-rounded">Ordered</button></td>
                                         </tr>
 
                                         <tr>
@@ -126,9 +128,9 @@
                                             <td>#8546678</td>
                                             <td>Chicken Biryani</td>
                                             <td><button type="button" class="btn btn-success btn-rounded">$30</button></td>
-                                            <td><div class="half-full-stars"></div></td>
+                                            <!--<td><div class="half-full-stars"></div></td>-->
                                             <td><button type="button" class="btn btn-primary btn-rounded">105</button></td>
-                                            <td><button type="button" class="btn btn-warning btn-rounded">Pending</button></td>
+                                            <td><button type="button" class="customcheckbox btn btn-warning btn-rounded">Ordered</button></td>
                                         </tr>
 
                                         <tr>
@@ -136,9 +138,9 @@
                                             <td>#8546679</td>
                                             <td>Chicken Fried Rice</td>
                                             <td><button type="button" class="btn btn-success btn-rounded">$31</button></td>
-                                            <td><div class="full-stars-only"></div></td>
+                                            <!--<td><div class="full-stars-only"></div></td>-->
                                             <td><button type="button" class="btn btn-primary btn-rounded">110</button></td>
-                                            <td><button type="button" class="btn btn-primary btn-rounded">Failed</button></td>
+                                            <td><button type="button" class="customcheckbox btn btn-success btn-rounded">Completed</button></td>
                                         </tr>
 
                                         <tr>
@@ -146,11 +148,11 @@
                                             <td>#8546680</td>
                                             <td>Crispy Chicken Salt</td>
                                             <td><button type="button" class="btn btn-success btn-rounded">$32</button></td>
-                                            <td><div class="full-stars-only"></div></td>
+                                            <!--<td><div class="full-stars-only"></div></td>-->
                                             <td><button type="button" class="btn btn-primary btn-rounded">120</button></td>
-                                            <td><button type="button" class="btn btn-success btn-rounded">Paid</button></td>
+                                            <td><button type="button" class="customcheckbox btn btn-success btn-rounded">Completed</button></td>
                                         </tr>
-
+<!--
                                         <tr>
                                             <td>Micheal Qin</td>
                                             <td>#8546681</td>
@@ -199,7 +201,7 @@
                                             <td><div class="full-stars-only"></div></td>
                                             <td><button type="button" class="btn btn-primary btn-rounded">185</button></td>
                                             <td><button type="button" class="btn btn-primary btn-rounded">Failed</button></td>
-                                        </tr>
+                                        </tr>-->
                                         </tbody>
                                     </table>
                                 </div>
@@ -220,6 +222,7 @@
     <script src="assets/js/lib/rating1/jRate.min.js"></script><!-- scripit init-->
     <script src="assets/js/lib/rating1/jRate.init.js"></script><!-- scripit init-->
     <script src="assets/js/scripts.js"></script><!-- scripit init-->
+    <script src="assets/js/customcode.js"></script><!-- scripit init-->
 </body>
 
 </html>
