@@ -99,7 +99,7 @@
                      <div class="col-lg-8">
                         <div class="card alert">
                            <div class="card-header">
-                              <h4>New Box:</h4>
+                              <h4>Configure Discount Box</h4>
                               <!--
                                  <div class="card-header-right-icon">
                                                                 <ul>
@@ -126,38 +126,38 @@
                                            </div>
                                        </div>-->
                                     <div class="form-group">
-                                       <label class="col-sm-2 control-label">Name:</label>
+                                       <label class="col-sm-2 control-label">Food:</label>
                                        <div class="col-sm-10">
-                                          <input type="text" class="form-control" id="b-name" placeholder="Type in your box name">
+                                          <input type="text" class="form-control" id="b-name" placeholder="Name of the food item">
                                        </div>
                                     </div>
                                     <div class="form-group">
-                                       <label class="col-sm-2 control-label">Details:</label>
+                                       <label class="col-sm-2 control-label">Description:</label>
                                        <div class="col-sm-10">
-                                          <textarea class="form-control" rows="3" id="b-details" placeholder="Describe what is in your box"></textarea>
+                                          <textarea class="form-control" rows="3" id="b-details" placeholder="Ingredients or details about the food"></textarea>
                                        </div>
                                     </div>
                                     <div class="form-group">
-                                       <label class="col-sm-2 control-label">Price</label>
+                                       <label class="col-sm-2 control-label">Price:</label>
                                        <div class="col-sm-10">
                                           <input type="text" class="form-control" id="b-price" placeholder="$8.59">
                                        </div>
                                     </div>
                                     <div class="form-group">
-                                       <label class="col-sm-2 control-label">Time End</label>
-                                       <div class="col-sm-10">
-                                          <input type="text" class="form-control" id="b-available" placeholder="3 pm">
-                                       </div>
-                                    </div>
+                                        <label class="col-sm-2 control-label">Time Start:</label>
+                                        <div class="col-sm-10">
+                                           <input type="text" class="form-control" id="b-start" placeholder="3 pm">
+                                        </div>
+                                     </div>
                                     <div class="form-group">
-                                       <label class="col-sm-2 control-label">Time Start</label>
+                                       <label class="col-sm-2 control-label">Time End:</label>
                                        <div class="col-sm-10">
-                                          <input type="text" class="form-control" id="b-start" placeholder="3 pm">
+                                          <input type="text" class="form-control" id="b-available" placeholder="8 pm">
                                        </div>
                                     </div>
                                     <div class="form-group">
                                        <div class="col-sm-offset-2 col-sm-10">
-                                          <button onclick="submitIt()" class="btn btn-lg btn-primary">Create</button>
+                                          <button onclick="submitIt()" class="btn btn-lg btn-primary">Add Food</button>
                                        </div>
                                     </div>
 									<script>
@@ -184,7 +184,7 @@ document.getElementById("box_container").innerHTML += '<div class="card alert ro
     database2.once('value').then(function(snapshot) {
 var elements2 = document.getElementsByClassName("untiil");
 for(var i=0; i<elements2.length; i++) {
-    elements2[i].innerHTML = snapshot.val().timeStart + " - " + snapshot.val().timeEnd;
+    elements2[i].innerHTML = snapshot.val().timeStart + " to " + snapshot.val().timeEnd;
 }
 
 var elements = document.getElementsByClassName("priice");
