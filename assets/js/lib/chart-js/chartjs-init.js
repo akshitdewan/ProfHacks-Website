@@ -10,7 +10,7 @@
     var ctx = document.getElementById("sales-chart");
     var myChart;
 	var previous;
-    var predictionData = [10,11,12.5,14,18,30,23,18,14,12.5,14,30,25,19,15,8,5];
+    var predictionData = [5,10,15,28,35,50,35,23,23,20,35,50,25,19,15,8,5];
 	setInterval(function(){ 
     database.once('value').then(function(snapshot) {
        
@@ -23,9 +23,9 @@
 		
         var dataArray = snapshot.val();
         var lastIndex = dataArray.length - 1;
-        var canDiscount = dataArray[lastIndex]< 30/2;
+        var canDiscount = dataArray[lastIndex]< 50/2;
         for(var i = lastIndex; i<lastIndex+2 && i < predictionData.length; i++){
-            if(predictionData[i]>=15){
+            if(predictionData[i]>=50/2){
                 canDiscount = false;
 				}
         }
@@ -57,7 +57,7 @@
                     },
                     {
                 data: predictionData,
-                label: "# of Customers",
+                label: "past # of Customers",
                 backgroundColor: 'transparent',
                 borderColor: 'rgba(0,180,232,.75)',
                 borderWidth: 0.5,
