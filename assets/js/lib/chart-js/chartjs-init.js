@@ -1,6 +1,6 @@
 (function ($) {
     "use strict";
-	
+   
     var config = {
         apiKey: "AIzaSyCGAhEirtKDNysgXK5b4fYU4AHZlK2d2M8",
         databaseURL: "https://profapp-e3c81.firebaseio.com/"
@@ -9,44 +9,45 @@
     var database = firebase.database().ref().child('test');
     var ctx = document.getElementById("sales-chart");
     var myChart;
-	var previous;
+    var previous;
     var predictionData = [5,10,15,28,35,50,35,23,23,20,35,50,25,19,15,8,5];
-	setInterval(function(){ 
+    setInterval(function(){
     database.once('value').then(function(snapshot) {
        
-		
-		// if(previous != null){
-		// alert(previous.length);
-		// alert(snapshot.val().length);
-		// }
-		if(previous == null|| snapshot.val().length != previous.length){
-		
+       
+        // if(previous != null){
+        // alert(previous.length);
+        // alert(snapshot.val().length);
+        // }
+        if(previous == null|| snapshot.val().length != previous.length){
+       
         var dataArray = snapshot.val();
         var lastIndex = dataArray.length - 1;
         var canDiscount = dataArray[lastIndex]< 50/2;
-        for(var i = lastIndex; i<lastIndex+2 && i < predictionData.length; i++){
-            if(predictionData[i]>=50/2){
+        for(var i = lastIndex+1; i<=lastIndex+2 && i < predictionData.length; i++){
+            if(predictionData[i]>=25){
                 canDiscount = false;
-				}
+                }
         }
-		
-		if(canDiscount){
-		
-	document.getElementById("discountr").style.visibility='visible';
-	}
-		
-		
+       
+        if(canDiscount){
+       
+    document.getElementById("discountr").style.visibility='visible';
+    }else{
+    document.getElementById("discountr").style.visibility='hidden';
+    }
+       
+       
     //Team chart
     var ctx = document.getElementById("team-chart");
     var myChart = new Chart(ctx, {
         type: 'line',
-        data: {
-            labels: ["8 am", "9 am", "10 am", "11 am", "12 am","1 pm", "2 pm", "3 pm", "4 pm", "5 pm", "6 pm", "7 pm", "8 pm", "9 pm", "10 pm", "11 pm", "12 pm"],
+        data: {labels: ["8 am", "9 am", "10 am", "11 am", "12 am","1 pm", "2 pm", "3 pm", "4 pm", "5 pm", "6 pm", "7 pm", "8 pm", "9 pm", "10 pm", "11 pm", "12 pm"],
             type: 'line',
             defaultFontFamily: 'Montserrat',
             datasets: [{
                 data: dataArray,
-                label: "# of Customers",
+                label: "Today's Customer Volume",
                 backgroundColor: 'transparent',
                 borderColor: 'rgba(255,46,68,.75)',
                 borderWidth: 0.5,
@@ -57,7 +58,7 @@
                     },
                     {
                 data: predictionData,
-                label: "past # of Customers",
+                label: "Average Customer Volume",
                 backgroundColor: 'transparent',
                 borderColor: 'rgba(0,180,232,.75)',
                 borderWidth: 0.5,
@@ -86,8 +87,8 @@
                     usePointStyle: true,
                     fontFamily: 'Montserrat',
                 },
-
-
+ 
+ 
             },
             scales: {
                 xAxes: [{
@@ -139,7 +140,7 @@
         // },
         // options: {
             // responsive: true,
-
+ 
             // tooltips: {
                 // mode: 'index',
                 // titleFontSize: 12,
@@ -187,11 +188,11 @@
             // }
         // }
     // });
-	previous = snapshot.val();
+    previous = snapshot.val();
   });
 }, 5000);
-
-
-
-
+ 
+ 
+ 
+ 
 })(jQuery);

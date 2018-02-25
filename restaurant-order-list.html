@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>ProfApps : Orders</title>
+    <title>Munch : Orders</title>
 	
 	<!-- ================= Favicon ================== -->
     <!-- Standard -->
@@ -63,7 +63,7 @@
 
     <div class="header">
         <div class="pull-left">
-            <div class="logo"><a href="index.html"><span>ProfApp</span></a></div>
+            <div class="logo"><a href="index.html"><span>Munch</span></a></div>
             <div class="hamburger sidebar-toggle">
                 <span class="line"></span>
                 <span class="line"></span>
@@ -90,7 +90,7 @@
                             <div class="page-title">
                                 <ol class="breadcrumb text-right">
                                     <li><a href="#">Orders</a></li>
-                                    <li class="active">ProfApp</li>
+                                    <li class="active">Munch</li>
                                 </ol>
                             </div>
                         </div>
@@ -106,7 +106,24 @@
 									<script>
 									var zip = sessionStorage.getItem('zip');
 									var name = sessionStorage.getItem('name');
-									
+								function updateClick(db, id){
+
+    $("#" + id).click(function() {
+<!-- alert("HI"); -->
+	var	 c = 0;
+	if($(this).text() == "Yes"){
+	   $(this).text("No");
+	   $(this).attr( "class", "customcheckbox btn btn-warning btn-rounded" );
+    }else{
+	   c = 1;
+	   $(this).text("Yes");
+	   $(this).attr( "class", "customcheckbox btn btn-success btn-rounded" );
+    } var otherData = {
+    completed: c
+   };
+   db.update(otherData);
+     });
+	 }	
     var config = {
         apiKey: "AIzaSyCGAhEirtKDNysgXK5b4fYU4AHZlK2d2M8",
         databaseURL: "https://profapp-e3c81.firebaseio.com/"
@@ -117,11 +134,14 @@
 	snapshot.forEach(function(userSnapshot) {
         var username = userSnapshot.val();
 		var c = "Yes";
+		var s = 'btn-success';
   if(username.completed == null || username.completed == 0){
   c="No";
+  s='btn-warning';
   }
-document.getElementById("table_order").innerHTML += '<tr><td>'+username.name+'</td><td>'+username.phonenumber+'</td><td><button type="button" class="customcheckbox btn btn-warning btn-rounded">'+c+'</button></td></tr>';
+document.getElementById("table_order").innerHTML += '<tr><td>'+username.name+'</td><td>'+username.phonenumber+'</td><td><button type="button" class="customcheckbox btn ' +s + ' btn-rounded" id="'+userSnapshot.key+'">'+c+'</button></td></tr>';
 //<td>'+username.box+'+'</td><td><button type="button" class="btn btn-success btn-rounded">$'+username.price+'</button></td><td><button type="button" class="btn btn-primary btn-rounded">'+username.quantity+'</button></td>
+updateClick(firebase.database().ref().child('states').child('NJ').child(zip).child(name).child("purchases").child(userSnapshot.key), userSnapshot.key);
     });
 									});
 									</script>
