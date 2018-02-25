@@ -28,6 +28,7 @@
     <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/lib/unix.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+	<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
 </head>
 
 <body>
@@ -102,23 +103,45 @@
                                 <div class="order-list-item">
                                     <table class="table">
                                         <thead>
+									<script>
+									var zip = sessionStorage.getItem('zip');
+									var name = sessionStorage.getItem('name');
+									
+    var config = {
+        apiKey: "AIzaSyCGAhEirtKDNysgXK5b4fYU4AHZlK2d2M8",
+        databaseURL: "https://profapp-e3c81.firebaseio.com/"
+    };
+    firebase.initializeApp(config);
+    var database = firebase.database().ref().child('states').child('NJ').child(zip).child(name).child("purchases");
+    database.once('value').then(function(snapshot) {
+	snapshot.forEach(function(userSnapshot) {
+        var username = userSnapshot.val();
+		var c = "Yes";
+  if(username.completed == null || username.completed == 0){
+  c="No";
+  }
+document.getElementById("table_order").innerHTML += '<tr><td>'+username.name+'</td><td>'+username.phonenumber+'</td><td><button type="button" class="customcheckbox btn btn-warning btn-rounded">'+c+'</button></td></tr>';
+//<td>'+username.box+'+'</td><td><button type="button" class="btn btn-success btn-rounded">$'+username.price+'</button></td><td><button type="button" class="btn btn-primary btn-rounded">'+username.quantity+'</button></td>
+    });
+									});
+									</script>
                                         <tr>
                                             <th>Customer</th>
-                                            <th>Order ID</th>
-                                            <th>Box</th>
-                                            <th>Price</th>
-                                            <!--<th>Rating</th>-->
-                                            <th>Quantity</th>
+                                            <th>Phone Number</th>
+                                            <!--<th>Box</th>-->
+                                           <!-- <th>Price</th>
+                                            <th>Rating</th>
+                                            <th>Quantity</th>-->
                                             <th>Completed?</th>
                                         </tr>
                                         </thead>
-                                        <tbody>
-                                        <tr>
+                                        <tbody id="table_order">
+                                        <!--<tr>
                                             <td>Saiful Islam</td>
                                             <td>#8546677</td>
                                             <td>Hot Dog</td>
                                             <td><button type="button" class="btn btn-success btn-rounded">$29</button></td><!--
-                                            <td><div class="full-stars-only"></div></td>-->
+                                            <td><div class="full-stars-only"></div></td>--><!--
                                             <td><button type="button" class="btn btn-primary btn-rounded">100</button></td>
                                             <td><button type="button" class="customcheckbox btn btn-warning btn-rounded">Ordered</button></td>
                                         </tr>
@@ -128,7 +151,7 @@
                                             <td>#8546678</td>
                                             <td>Chicken Biryani</td>
                                             <td><button type="button" class="btn btn-success btn-rounded">$30</button></td>
-                                            <!--<td><div class="half-full-stars"></div></td>-->
+                                            <!--<td><div class="half-full-stars"></div></td>--><!--
                                             <td><button type="button" class="btn btn-primary btn-rounded">105</button></td>
                                             <td><button type="button" class="customcheckbox btn btn-warning btn-rounded">Ordered</button></td>
                                         </tr>
@@ -138,7 +161,7 @@
                                             <td>#8546679</td>
                                             <td>Chicken Fried Rice</td>
                                             <td><button type="button" class="btn btn-success btn-rounded">$31</button></td>
-                                            <!--<td><div class="full-stars-only"></div></td>-->
+                                            <!--<td><div class="full-stars-only"></div></td>--><!--
                                             <td><button type="button" class="btn btn-primary btn-rounded">110</button></td>
                                             <td><button type="button" class="customcheckbox btn btn-success btn-rounded">Completed</button></td>
                                         </tr>
@@ -148,10 +171,10 @@
                                             <td>#8546680</td>
                                             <td>Crispy Chicken Salt</td>
                                             <td><button type="button" class="btn btn-success btn-rounded">$32</button></td>
-                                            <!--<td><div class="full-stars-only"></div></td>-->
+                                            <!--<td><div class="full-stars-only"></div></td>--><!--
                                             <td><button type="button" class="btn btn-primary btn-rounded">120</button></td>
                                             <td><button type="button" class="customcheckbox btn btn-success btn-rounded">Completed</button></td>
-                                        </tr>
+                                        </tr>-->
 <!--
                                         <tr>
                                             <td>Micheal Qin</td>

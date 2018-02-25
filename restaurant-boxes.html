@@ -90,27 +90,8 @@
                <!-- /# row -->
                <div class="main-content">
                   <div class="column">
-                     <div class="col-lg-4">
+                     <div class="col-lg-4" id="box_container">
 					 <!-- START CARD -->
-                        <div class="card alert row">
-                           <div class="card-header">
-                              <h4>Chicken Box:</h4>
-                              <div class="card-header-right-icon">
-                                 <ul>
-                                    <li class="card-close" data-dismi ss="alert"><i class="ti-close"></i></li>
-                                 </ul>
-                              </div>
-                           </div>
-                           <div class="card-body">
-                              <p>
-                                 10 chicken nuggets and 8 wings!
-                              </p>
-                              <p>
-                              <div class="btn btn-primary">$4</div>
-                              <div class="btn btn-warning">Available until 5pm</div>
-                              </p>
-                           </div>
-                        </div>
 					 <!-- END CARD -->
                      </div>
                   </div>
@@ -129,9 +110,8 @@
                            </div>
                            <div class="card-body">
                               <div class="menu-upload-form">
-                                 <form class="form-horizontal">
-                                    <!--
-                                       <div class="form-group">
+                                 <div class="form-horizontal">
+                                      <!-- <div class="form-group">
                                            <label class="col-sm-2 control-label">Upload Product</label>
                                            <div class="col-sm-10">
                                                <div class="form-control file-input dark-browse-input-box">
@@ -148,25 +128,31 @@
                                     <div class="form-group">
                                        <label class="col-sm-2 control-label">Name:</label>
                                        <div class="col-sm-10">
-                                          <input type="text" class="form-control" placeholder="Type in your box name">
+                                          <input type="text" class="form-control" id="b-name" placeholder="Type in your box name">
                                        </div>
                                     </div>
                                     <div class="form-group">
                                        <label class="col-sm-2 control-label">Details:</label>
                                        <div class="col-sm-10">
-                                          <textarea class="form-control" rows="3" placeholder="Describe what is in your box"></textarea>
+                                          <textarea class="form-control" rows="3" id="b-details" placeholder="Describe what is in your box"></textarea>
                                        </div>
                                     </div>
                                     <div class="form-group">
                                        <label class="col-sm-2 control-label">Price</label>
                                        <div class="col-sm-10">
-                                          <input type="text" class="form-control" placeholder="$8.59">
+                                          <input type="text" class="form-control" id="b-price" placeholder="$8.59">
                                        </div>
                                     </div>
                                     <div class="form-group">
-                                       <label class="col-sm-2 control-label">Availabile Until</label>
+                                       <label class="col-sm-2 control-label">Time End</label>
                                        <div class="col-sm-10">
-                                          <input type="text" class="form-control" placeholder="3 pm">
+                                          <input type="text" class="form-control" id="b-available" placeholder="3 pm">
+                                       </div>
+                                    </div>
+                                    <div class="form-group">
+                                       <label class="col-sm-2 control-label">Time Start</label>
+                                       <div class="col-sm-10">
+                                          <input type="text" class="form-control" id="b-start" placeholder="3 pm">
                                        </div>
                                     </div>
                                     <div class="form-group">
@@ -175,27 +161,56 @@
                                        </div>
                                     </div>
 									<script>
+									var opt;
 									var zip = sessionStorage.getItem('zip');
 									var name = sessionStorage.getItem('name');
-									alert(zip + name);
 									
+	function removeObj(){
+	database.remove();
+	window.location.href="file:///C:/PROFHACKS/Site/site/foodmin/restaurant-boxes.html";
+	}
     var config = {
         apiKey: "AIzaSyCGAhEirtKDNysgXK5b4fYU4AHZlK2d2M8",
         databaseURL: "https://profapp-e3c81.firebaseio.com/"
     };
-    firebase.initializeApp(config);
-    var database = firebase.database().ref().child('states').child('NJ').child(zip).child(name).child("purchases");
+    firebase.initializeApp(config);var database2 = firebase.database().ref().child('states').child('NJ').child(zip).child(name);
+    
+    var database = firebase.database().ref().child('states').child('NJ').child(zip).child(name).child("foodOptions");
     database.once('value').then(function(snapshot) {
 	snapshot.forEach(function(userSnapshot) {
         var username = userSnapshot.val();
-        alert(username.first_name);
+document.getElementById("box_container").innerHTML += '<div class="card alert row"><div class="card-header"><h4>' + username.name + ':</h4><div class="card-header-right-icon"><ul><li class="card-close" data-dismi ss="alert"><i class="ti-close" onclick="removeObj()"></i></li></ul></div></div><div class="card-body"><p>'+username.description+'</p><p><div class="btn btn-primary priice">$</div><div class="btn btn-warning untiil"></div></p></div></div>';
     });
+    database2.once('value').then(function(snapshot) {
+var elements2 = document.getElementsByClassName("untiil");
+for(var i=0; i<elements2.length; i++) {
+    elements2[i].innerHTML = snapshot.val().timeStart + " - " + snapshot.val().timeEnd;
+}
+
+var elements = document.getElementsByClassName("priice");
+for(var i=0; i<elements.length; i++) {
+    elements[i].innerHTML = '$' + snapshot.val().priceOfBox;
+}
+	});
 									});
 									function submitIt(){
-									
+									// A post entry.
+  var postData = {
+    name: document.getElementById("b-name").value,
+    description: document.getElementById("b-details").value,
+  };
+  var otherData = {
+    priceOfBox: document.getElementById("b-price").value,
+    timeStart: document.getElementById("b-start").value,
+    timeEnd: document.getElementById("b-available").value
+  };
+
+  // Get a key for a new Post.
+  var key2 = database2.update(otherData);
+  var key = database.push(postData);
+  window.location.href = "file:///C:/PROFHACKS/Site/site/foodmin/restaurant-boxes.html";
 									}
-									</script>
-                                 </form>
+									</script></div>
                               </div>
                            </div>
                         </div>

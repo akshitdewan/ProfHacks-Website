@@ -10,6 +10,7 @@
     var ctx = document.getElementById("sales-chart");
     var myChart;
 	var previous;
+    var predictionData = [10,11,12.5,14,18,30,23,18,14,12.5,14,30,25,19,15,8,5];
 	setInterval(function(){ 
     database.once('value').then(function(snapshot) {
        
@@ -19,6 +20,20 @@
 		// alert(snapshot.val().length);
 		// }
 		if(previous == null|| snapshot.val().length != previous.length){
+		
+        var dataArray = snapshot.val();
+        var lastIndex = dataArray.length - 1;
+        var canDiscount = dataArray[lastIndex]< 30/2;
+        for(var i = lastIndex; i<lastIndex+2 && i < predictionData.length; i++){
+            if(predictionData[i]>=15){
+                canDiscount = false;
+				}
+        }
+		
+		if(canDiscount){
+		
+	document.getElementById("discountr").style.visibility='visible';
+	}
 		
 		
     //Team chart
@@ -30,7 +45,7 @@
             type: 'line',
             defaultFontFamily: 'Montserrat',
             datasets: [{
-                data: snapshot.val(),
+                data: dataArray,
                 label: "# of Customers",
                 backgroundColor: 'transparent',
                 borderColor: 'rgba(255,46,68,.75)',
@@ -39,6 +54,17 @@
                 pointRadius: 5,
                 pointBorderColor: 'transparent',
                 pointBackgroundColor: '#ed7f7e',
+                    },
+                    {
+                data: predictionData,
+                label: "# of Customers",
+                backgroundColor: 'transparent',
+                borderColor: 'rgba(0,180,232,.75)',
+                borderWidth: 0.5,
+                pointStyle: 'circle',
+                pointRadius: 5,
+                pointBorderColor: 'transparent',
+                pointBackgroundColor: '#00b4e8',
                     }]
         },
         options: {
