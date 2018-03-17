@@ -23,7 +23,7 @@
   -moz-border-radius: 0 !important;
   background: #ffffff;
   border: none !important;
-  color: #ff2e44;
+  color: #34495e;
 }
 .dark-browse-input-box .dark-input-button i {
   font-weight: bold;
@@ -31,7 +31,7 @@
 }
 .dark-browse-input-box .dark-input-button:hover {
   background: #ffffff;
-  color: #ff2e44;
+  color: #34495e;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;

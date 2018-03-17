@@ -13,7 +13,7 @@
 .control-bar {
   position: relative;
   z-index: 100;
-  background: #ff2e44;
+  background: #34495e;
   color: #ffffff;
   padding: 15px;
   margin-bottom: 30px;
@@ -126,7 +126,7 @@
 .invoicelist-body .control {
   display: inline-block;
   color: white;
-  background: #ff2e44;
+  background: #34495e;
   padding: 3px 7px;
   font-size: .9rem;
   text-transform: uppercase;
@@ -168,7 +168,7 @@
 }
 .invoicelist-footer table #total_price {
   font-size: 2rem;
-  color: #ff2e44;
+  color: #34495e;
 }
 /**
  * NOTE

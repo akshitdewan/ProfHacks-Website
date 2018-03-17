@@ -48,7 +48,7 @@
   text-transform: uppercase;
 }
 .login-form label a {
-  color: #ff2e44;
+  color: #34495e;
 }
 .social-login-content {
   margin: 0px -30px;
@@ -64,5 +64,5 @@
   padding: 19px;
 }
 .register-link a {
-  color: #ff2e44;
+  color: #34495e;
 }

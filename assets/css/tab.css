@@ -22,13 +22,13 @@
 .custom-tab .nav-tabs > li.active > a:focus,
 .custom-tab .nav-tabs > li.active > a:hover {
   border-color: transparent transparent;
-  color: #ff2e44;
+  color: #34495e;
   position: relative;
 }
 .custom-tab .nav-tabs > li.active > a:after,
 .custom-tab .nav-tabs > li.active > a:focus:after,
 .custom-tab .nav-tabs > li.active > a:hover:after {
-  background: #ff2e44;
+  background:#34495e;
   bottom: -1px;
   content: "";
   height: 2px;
@@ -57,7 +57,7 @@
 .vertical-tab-left .nav-tabs > li.active > a,
 .vertical-tab-left .nav-tabs > li.active > a:focus,
 .vertical-tab-left .nav-tabs > li.active > a:hover {
-  background: #ff2e44;
+  background: #34495e;
   color: #ffffff;
   border-color: transparent transparent;
 }
@@ -83,7 +83,7 @@
 .vertical-tab-right .nav-tabs > li.active > a,
 .vertical-tab-right .nav-tabs > li.active > a:focus,
 .vertical-tab-right .nav-tabs > li.active > a:hover {
-  background: #ff2e44;
+  background: #34495e;
   color: #ffffff;
   border-color: transparent transparent;
 }

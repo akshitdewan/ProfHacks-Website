@@ -37,10 +37,10 @@
   border-radius: 100px;
 }
 .input-focus {
-  border-color: #ff2e44;
+  border-color: #34495e;
 }
 .input-focus:focus {
-  border-color: #ff2e44;
+  border-color: #34495e;
 }
 /*    Search Box Input Button
 --------------------------------*/

@@ -58,7 +58,7 @@ p {
 -------------------*/
 .text-primary,
 .color-primary {
-  color: #ff2e44;
+  color: #34495e;
 }
 .text-success,
 .color-success {
@@ -87,7 +87,7 @@ p {
 /*    Background Mixins
 --------------------------*/
 .bg-primary {
-  background: #ff2e44;
+  background: #34495e;
   color: #ffffff;
 }
 .bg-success {
@@ -121,7 +121,7 @@ p {
 /*    Border Mixins
 --------------------------*/
 .border-primary {
-  border-color: #ff2e44;
+  border-color: #34495e;
 }
 .border-success {
   border-color: #87de75;

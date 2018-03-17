@@ -83,7 +83,7 @@ a.mail-dropdown {
   box-shadow: none;
 }
 .btn-compose {
-  background: #ff2e44;
+  background: #34495e;
   color: #ffffff;
   padding: 12px 0;
   text-align: center;
@@ -92,7 +92,7 @@ a.mail-dropdown {
 .btn-compose:hover,
 .btn-compose:focus,
 .btn-compose.active {
-  background: #ff2e44;
+  background: #34495e;
   color: #ffffff;
 }
 ul.inbox-nav {

@@ -14,11 +14,11 @@
   font-family: 'MontserratLight', sans-serif;
 }
 .panel-primary {
-  border-color: #ff2e44;
+  border-color: #34495e;
 }
 .panel-primary .panel-heading {
-  background: #ff2e44;
-  border-color: #ff2e44;
+  background: #34495e;
+  border-color: #34495e;
   color: #ffffff;
 }
 .panel-success {

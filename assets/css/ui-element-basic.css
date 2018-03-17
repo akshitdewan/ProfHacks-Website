@@ -11,7 +11,7 @@
 .alert-primary {
   background-color: #ff8a96;
   border-color: #ff8a96;
-  color: #ff2e44;
+  color: #34495e;
 }
 .alert-success {
   background-color: #e0f7dc;
@@ -43,7 +43,7 @@
   background-color: #878787;
 }
 .label-primary {
-  background-color: #ff2e44;
+  background-color: #34495e;
 }
 .label-success {
   background-color: #87de75;

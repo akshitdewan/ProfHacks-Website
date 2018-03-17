@@ -37,24 +37,24 @@
 .dt-buttons .dt-button:focus,
 .dt-buttons .dt-button.active {
   background-image: none;
-  background: #ff2e44;
+  background: #34495e;
   color: #ffffff;
 }
 button.dt-button:hover:not(.disabled),
 div.dt-button:hover:not(.disabled),
 a.dt-button:hover:not(.disabled) {
-  background-color: #ff2e44;
+  background-color: #34495e;
   background-image: none;
-  border: 1px solid #ff2e44;
+  border: 1px solid #34495e;
   box-shadow: none;
   color: #ffffff;
 }
 button.dt-button:focus:not(.disabled),
 div.dt-button:focus:not(.disabled),
 a.dt-button:focus:not(.disabled) {
-  background-color: #ff2e44;
+  background-color: #34495e;
   background-image: none;
-  border: 1px solid #ff2e44;
+  border: 1px solid #34495e;
   box-shadow: none;
   color: #ffffff;
 }
@@ -64,9 +64,9 @@ div.dt-button:active:hover:not(.disabled):not(.disabled),
 div.dt-button.active:hover:not(.disabled):not(.disabled),
 a.dt-button:active:hover:not(.disabled):not(.disabled),
 a.dt-button.active:hover:not(.disabled):not(.disabled) {
-  background-color: #ff2e44;
+  background-color: #34495e;
   background-image: none;
-  border: 1px solid #ff2e44;
+  border: 1px solid #34495e;
   box-shadow: none;
   color: #ffffff;
 }
@@ -76,9 +76,9 @@ div.dt-button:active:not(.disabled),
 div.dt-button.active:not(.disabled),
 a.dt-button:active:not(.disabled),
 a.dt-button.active:not(.disabled) {
-  background-color: #ff2e44;
+  background-color: #34495e;
   background-image: none;
-  border: 1px solid #ff2e44;
+  border: 1px solid #34495e;
   box-shadow: none;
   color: #ffffff;
 }

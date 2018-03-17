@@ -62,7 +62,7 @@
     font-size: 0.9em;
     height: 30px;
     line-height: 40px;
-    color: #ff2e44  ;
+    color: #34495e  ;
     text-transform: uppercase;
     font-weight: normal;
 }
@@ -115,12 +115,12 @@
 .sidebar .nano-content > ul li:hover > a,
 .sidebar .nano-content > ul li.active > a,
 .sidebar .nano-content > ul li.open > a {
-    color: #ff2e44 ;
+    color: #34495e ;
     position: relative;
 }
 
 .sidebar .nano-content > ul li.active > a::before {
-    background: #ff2e44 ;
+    background: #34495e ;
     content: "";
     height: 100%;
     left: 0;

@@ -20,15 +20,15 @@
   box-shadow: none;
 }
 .btn-primary {
-  background: #ff2e44;
-  border-color: #ff2e44;
+  background: #34495e;
+  border-color: #34495e;
   color: #ffffff;
 }
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary.active {
   background: #fa001a;
-  border-color: #ff2e44;
+  border-color: #34495e;
   color: #ffffff;
   box-shadow: none;
 }
