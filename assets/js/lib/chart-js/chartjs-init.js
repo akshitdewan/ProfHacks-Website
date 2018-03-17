@@ -10,7 +10,7 @@
     var ctx = document.getElementById("sales-chart");
     var myChart;
     var previous;
-    var predictionData = [5,10,15,28,35,50,35,23,23,20,35,50,25,19,15,8,5];
+    var predictionData = [348,355,422,465,467,404,347,305,336,340,318,362,348,363,435,491,505,404,359,310,337,360,342,406,396,420,472,548,559,463,407,362];
     setInterval(function(){
     database.once('value').then(function(snapshot) {
        
@@ -42,7 +42,7 @@
     var ctx = document.getElementById("team-chart");
     var myChart = new Chart(ctx, {
         type: 'line',
-        data: {labels: ["6 am","6:30 am","7 am","7:30 am","8 am","8:30 am", "9 am","9:30 am", "10 am", "10:30 am","11 am", "11:30 am","12 pm","12:30 pm","1 pm","1:30 pm", "2 pm","2:30 pm", "3 pm","3:30 pm", "4 pm","4:30 pm", "5 pm","5:30 pm", "6 pm", "6:30 pm","7 pm","7:30 pm", "8 pm", "8:30 pm","9 pm","9:30 pm", "10 pm", "10:30 pm","11 pm", "11:30 pm","12 am","12:30 pm","1 am"],
+        data: {labels: ["6 am","6:30 am","7 am","7:30 am","8 am","8:30 am", "9 am","9:30 am", "10 am", "10:30 am","11 am", "11:30 am","12 pm","12:30 pm","1 pm","1:30 pm", "2 pm","2:30 pm", "3 pm","3:30 pm", "4 pm","4:30 pm", "5 pm","5:30 pm", "6 pm", "6:30 pm","7 pm","7:30 pm", "8 pm", "8:30 pm","9 pm","9:30 pm", "10 pm"],
             type: 'line',
             defaultFontFamily: 'Montserrat',
             datasets: [{
