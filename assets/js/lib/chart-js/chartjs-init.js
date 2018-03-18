@@ -23,6 +23,7 @@
        
         var dataArray = snapshot.val();
         var lastIndex = dataArray.length - 1;
+<<<<<<< HEAD
         var canDiscount = dataArray[lastIndex]< 50/2;
         for(var i = lastIndex+1; i<=lastIndex+2 && i < predictionData.length; i++){
             if(predictionData[i]>=25){
@@ -30,6 +31,9 @@
                 }
         }
        
+=======
+        var canDiscount = dataArray[lastIndex]<predictionData[lastIndex];
+>>>>>>> 73362a6... asdf
         if(canDiscount){
        
     document.getElementById("discountr").style.visibility='visible';
@@ -40,6 +44,8 @@
        
     //Team chart
     var ctx = document.getElementById("team-chart");
+    ctx.height = 300;
+    ctx.width = 800;
     var myChart = new Chart(ctx, {
         type: 'line',
         data: {labels: ["6 am","6:30 am","7 am","7:30 am","8 am","8:30 am", "9 am","9:30 am", "10 am", "10:30 am","11 am", "11:30 am","12 pm","12:30 pm","1 pm","1:30 pm", "2 pm","2:30 pm", "3 pm","3:30 pm", "4 pm","4:30 pm", "5 pm","5:30 pm", "6 pm", "6:30 pm","7 pm","7:30 pm", "8 pm", "8:30 pm","9 pm","9:30 pm", "10 pm"],
