@@ -10,7 +10,7 @@
     var ctx = document.getElementById("sales-chart");
     var myChart;
     var previous;
-    var predictionData = [348,355,422,465,467,404,347,305,336,340,318,362,348,363,435,491,505,404,359,310,337,360,342,406,396,420,472,548,559,463,407,362];
+    var predictionData = [0,200,295,375,469,502,420,410,400,340,318,362,348,363,435,491,505,404,359,310,337,360,342,406,396,420,472,548,559,463,407,362];
     setInterval(function(){
     database.once('value').then(function(snapshot) {
        
@@ -23,17 +23,7 @@
        
         var dataArray = snapshot.val();
         var lastIndex = dataArray.length - 1;
-<<<<<<< HEAD
-        var canDiscount = dataArray[lastIndex]< 50/2;
-        for(var i = lastIndex+1; i<=lastIndex+2 && i < predictionData.length; i++){
-            if(predictionData[i]>=25){
-                canDiscount = false;
-                }
-        }
-       
-=======
         var canDiscount = dataArray[lastIndex]<predictionData[lastIndex];
->>>>>>> 73362a6... asdf
         if(canDiscount){
        
     document.getElementById("discountr").style.visibility='visible';
@@ -53,7 +43,7 @@
             defaultFontFamily: 'Montserrat',
             datasets: [{
                 data: dataArray,
-                label: "Today's Customer Volume",
+                label: "Predicted Customer Volume",
                 backgroundColor: 'transparent',
                 borderColor: 'rgba(255,46,68,.75)',
                 borderWidth: 0.5,
@@ -75,7 +65,8 @@
                     }]
         },
         options: {
-            responsive: true,
+            maintainAspectRatio: false,
+            responsive: false,
             tooltips: {
                 mode: 'index',
                 titleFontSize: 12,
