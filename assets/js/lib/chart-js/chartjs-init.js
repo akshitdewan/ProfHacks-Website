@@ -34,7 +34,7 @@
        
     //Team chart
     var ctx = document.getElementById("team-chart");
-    ctx.height = 300;
+    ctx.height = 400;
     ctx.width = 800;
     var myChart = new Chart(ctx, {
         type: 'line',

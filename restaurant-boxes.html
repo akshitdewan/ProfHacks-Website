@@ -1,299 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Munch : My Discount Box</title>
-      <!-- ================= Favicon ================== -->
-      <!-- Standard -->
-      <link rel="shortcut icon" href="http://placehold.it/64.png/000/fff">
-      <!-- Retina iPad Touch Icon-->
-      <link rel="apple-touch-icon" sizes="144x144" href="http://placehold.it/144.png/000/fff">
-      <!-- Retina iPhone Touch Icon-->
-      <link rel="apple-touch-icon" sizes="114x114" href="http://placehold.it/114.png/000/fff">
-      <!-- Standard iPad Touch Icon--> 
-      <link rel="apple-touch-icon" sizes="72x72" href="http://placehold.it/72.png/000/fff">
-      <!-- Standard iPhone Touch Icon--> 
-      <link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
-      <!-- Styles -->
-      <link href="assets/css/lib/font-awesome.min.css" rel="stylesheet">
-      <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
-      <link href="assets/css/lib/mmc-chat.css" rel="stylesheet" />
-      <link href="assets/css/lib/sidebar.css" rel="stylesheet">
-      <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
-      <link href="assets/css/lib/unix.css" rel="stylesheet">
-      <link href="assets/css/style.css" rel="stylesheet">
-    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
-   </head>
-   <body>
-      <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
-         <div class="nano">
-            <div class="nano-content">
-               <ul>
-                  <li class="label">MY RESTAURANT</li>
-                  <li ><a href="index.html"><i class="ti-home"></i> Dashboard </a></li>
-                  
-                  <!--<li><a class="sidebar-sub-toggle"><i class="ti-cup"></i> Menu <span class="sidebar-collapse-icon ti-angle-down"></span></a>
-                     <ul>
-                         <li><a href="restaurant-menu-three.html">View Menu</a></li>
-                         <li class="active"><a href="restaurant-upload-menu.html">Edit Menu</a></li>
-                     </ul>
-                     </li>-->
-                     
-                  <li  class="active"><a href="restaurant-boxes.html"><i class="ti-cup"></i> My Discount Box </a></li>
-                  <li ><a href="restaurant-order-list.html"><i class="ti-gallery"></i> Orders </a></li>
-                  
-                  
-                  <!--<li ><a href="restaurant-order-list.html"><i class="ti-cup"></i> Orders </a></li> 
-                     <li><a href="page-login.html">Login</a></li>
-                     <li><a href="page-register.html">Register</a></li>
-                     -->        
-               </ul>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tidbits : My Discount Box</title>
+        <!-- ================= Favicon ================== -->
+        <!-- Standard -->
+        <link rel="shortcut icon" href="http://placehold.it/64.png/000/fff">
+        <!-- Retina iPad Touch Icon-->
+        <link rel="apple-touch-icon" sizes="144x144" href="http://placehold.it/144.png/000/fff">
+        <!-- Retina iPhone Touch Icon-->
+        <link rel="apple-touch-icon" sizes="114x114" href="http://placehold.it/114.png/000/fff">
+        <!-- Standard iPad Touch Icon--> 
+        <link rel="apple-touch-icon" sizes="72x72" href="http://placehold.it/72.png/000/fff">
+        <!-- Standard iPhone Touch Icon--> 
+        <link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
+        <!-- Styles -->
+        <link href="assets/css/lib/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
+        <link href="assets/css/lib/mmc-chat.css" rel="stylesheet" />
+        <link href="assets/css/lib/sidebar.css" rel="stylesheet">
+        <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/lib/unix.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet">
+        <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+    </head>
+    <body>
+        <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
+            <div class="nano">
+                <div class="nano-content">
+                    <ul>
+                        <li class="label">MY RESTAURANT</li>
+                        <li ><a href="index.html"><i class="ti-home"></i> Dashboard </a></li>
+
+                        <!--<li><a class="sidebar-sub-toggle"><i class="ti-cup"></i> Menu <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+<ul>
+<li><a href="restaurant-menu-three.html">View Menu</a></li>
+<li class="active"><a href="restaurant-upload-menu.html">Edit Menu</a></li>
+</ul>
+</li>-->
+
+                        <li  class="active"><a href="restaurant-boxes.html"><i class="ti-cup"></i> My Discount Box </a></li>
+                        <li ><a href="restaurant-order-list.html"><i class="ti-gallery"></i> Orders </a></li>
+
+
+                        <!--<li ><a href="restaurant-order-list.html"><i class="ti-cup"></i> Orders </a></li> 
+<li><a href="page-login.html">Login</a></li>
+<li><a href="page-register.html">Register</a></li>
+-->        
+                    </ul>
+                </div>
             </div>
-         </div>
-      </div>
-      <!-- /# sidebar -->
-      <div class="header">
-         <div class="pull-left">
-            <div class="logo"><a href="index.html"><span>Munch</span></a></div>
-            <div class="hamburger sidebar-toggle">
-               <span class="line"></span>
-               <span class="line"></span>
-               <span class="line"></span>
+        </div>
+        <!-- /# sidebar -->
+        <div class="header">
+            <div class="pull-left">
+                <div class="logo"><a href="index.html"><span>Tidbits</span></a></div>
+                <div class="hamburger sidebar-toggle">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
             </div>
-         </div>
-      </div>
-      <div class="content-wrap">
-         <div class="main">
-            <div class="container-fluid">
-               <div class="row">
-                  <div class="col-lg-12 p-0">
-                     <div class="page-header">
-                        <div class="page-title">
-                           <h1>My Discount Box</h1>
+        </div>
+        <div class="content-wrap">
+            <div class="main">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 p-0">
+                            <div class="page-header">
+                                <div class="page-title">
+                                    <div class = "col-lg-1">
+                                        <img style = "padding-top:5px;" height = '50px' width="50px" class = "box-image">
+                                    </div>
+                                    <div class = "col-lg-3">
+                                        <h1>My Discount Box</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div style = "padding-top : 70px;background-color:white;">
                         </div>
-                     </div>
-                  </div>              <!-- /# column -->
-				  <div class="col-lg-8 p-0">
-					<div class="page-header">
-                        <div class="page-title">
-					<div style="padding-bottom: 10px;width: 100%">
-						   <div class="btn btn-primary priice">$?</div><div class="btn btn-warning untiil">?</div></div>
-						   </div>
-						   </div>
-						   </div>
-                  <div class="col-lg-4 p-0">
-                     <div class="page-header">
-                        <div class="page-title">
-                           <ol class="breadcrumb text-right">
-                              <li><a href="#">My Discount Box</a></li>
-                              <li class="active">Munch</li>
-                           </ol>
+                        <!-- /# column -->
+                        <div class="col-lg-8 p-0">
+                            <div class="page-header">
+                                <div class="page-title">
+                                    <div style="padding-bottom: 10px;width: 100%">
+                                        <div class="btn btn-primary priice">$?</div><div class="btn btn-warning untiil">?</div></div>
+                                </div>
+                            </div>
                         </div>
-                     </div>
-                  </div>
-                  <!-- /# column -->
-               </div>
-               <!-- /# row -->
-               <div class="main-content">
-                  <div class="column">
-                     <div class="col-lg-4" id="box_container">
-                     <!-- START CARD -->
-                        <div class="card alert" id="rreeeemove">
-                           <div class="card-header">
-                              <h4>No Foods Yet</h4>
-                           </div>
-						   </div>
-                     <!-- END CARD -->
-                     </div>
-                  </div>
-                  <div class="column">
-                     <div class="col-lg-8">
-                        <div class="card alert">
-                           <div class="card-header">
-                              <h4>Add a Food:</h4>
-                              <!--
-                                 <div class="card-header-right-icon">
-                                                                <ul>
-                                                                    <li class="card-close" data-dismiss="alert"><i class="ti-close"></i></li>
-                                                                    <li class="doc-link"><a href="#"><i class="ti-link"></i></a></li>
-                                                                </ul>
-                                                            </div>-->
-                           </div>
-                           <div class="card-body">
-                              <div class="menu-upload-form">
-                                 <div class="form-horizontal">
-                                      <!-- <div class="form-group">
-                                           <label class="col-sm-2 control-label">Upload Product</label>
-                                           <div class="col-sm-10">
-                                               <div class="form-control file-input dark-browse-input-box">
-                                                   <label for="inputFile-2">
-                                                               <span class="btn btn-danger dark-input-button">
-                                                                   <input type="file" id="inputFile-2" onchange="this.parentNode.parentNode.nextElementSibling.value = this.value">
-                                                                   <i class="fa fa-file-archive-o"></i>
-                                                               </span>
-                                                   </label>
-                                                   <input class="file-name input-flat" type="text" readonly="readonly" placeholder="Browse Files">
-                                               </div>
-                                           </div>
-                                       </div>-->
-                                    <div class="form-group">
-                                       <label class="col-sm-2 control-label">Food:</label>
-                                       <div class="col-sm-10">
-                                          <input type="text" class="form-control" id="b-name" placeholder="Name of the food item">
-                                       </div>
+                        <div class="col-lg-4 p-0">
+                            <div class="page-header">
+                                <div class="page-title">
+                                    <ol class="breadcrumb text-right">
+                                        <li><a href="#">My Discount Box</a></li>
+                                        <li class="active">Tidbits</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /# column -->
+                    </div>
+                    <!-- /# row -->
+                    <div class="main-content">
+                        <div class="column">
+                            <div class="col-lg-4" id="box_container">
+                                <!-- START CARD -->
+                                <div class="card alert" id="rreeeemove">
+                                    <div class="card-header">
+                                        <h4>No Foods Yet</h4>
                                     </div>
-                                    <div class="form-group">
-                                       <label class="col-sm-2 control-label">Description:</label>
-                                       <div class="col-sm-10">
-                                          <textarea class="form-control" rows="3" id="b-details" placeholder="Ingredients or details about the food"></textarea>
-                                       </div>
+                                </div>
+                                <!-- END CARD -->
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="col-lg-8">
+                                <div class="card alert">
+                                    <div class="card-header">
+                                        <h4>Add a Food:</h4>
+                                        <!--
+<div class="card-header-right-icon">
+<ul>
+<li class="card-close" data-dismiss="alert"><i class="ti-close"></i></li>
+<li class="doc-link"><a href="#"><i class="ti-link"></i></a></li>
+</ul>
+</div>-->
                                     </div>
-                                    <div class="form-group">
-                                       <div class="col-sm-offset-2 col-sm-10">
-                                          <button onclick="submitIt()" class="btn btn-lg btn-primary">Add Food</button>
-                                       </div>
-                                    </div>
-									</div>
-                              </div>
-                           </div>
-                        </div><div class="card alert">
-                           <div class="card-header">
-                              <h4>Edit Box:</h4>
-                              <!--
-                                 <div class="card-header-right-icon">
-                                                                <ul>
-                                                                    <li class="card-close" data-dismiss="alert"><i class="ti-close"></i></li>
-                                                                    <li class="doc-link"><a href="#"><i class="ti-link"></i></a></li>
-                                                                </ul>
-                                                            </div>-->
-                           </div>
-                           <div class="card-body">
-                              <div class="menu-upload-form">
-                                 <div class="form-horizontal">
-                                      <!-- <div class="form-group">
-                                           <label class="col-sm-2 control-label">Upload Product</label>
-                                           <div class="col-sm-10">
-                                               <div class="form-control file-input dark-browse-input-box">
-                                                   <label for="inputFile-2">
-                                                               <span class="btn btn-danger dark-input-button">
-                                                                   <input type="file" id="inputFile-2" onchange="this.parentNode.parentNode.nextElementSibling.value = this.value">
-                                                                   <i class="fa fa-file-archive-o"></i>
-                                                               </span>
-                                                   </label>
-                                                   <input class="file-name input-flat" type="text" readonly="readonly" placeholder="Browse Files">
-                                               </div>
-                                           </div>
-                                       </div>-->
-                                  
-                                    <div class="form-group">
-                                       <label class="col-sm-2 control-label">Price:</label>
-                                       <div class="col-sm-10">
-                                          <input type="text" class="form-control" id="b-price" placeholder="$8.59">
-                                       </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Time Start:</label>
-                                        <div class="col-sm-10">
-                                           <input type="text" class="form-control" id="b-start" placeholder="3 pm">
+                                    <div class="card-body">
+                                        <div class="menu-upload-form">
+                                            <div class="form-horizontal">
+                                                <!-- <div class="form-group">
+<label class="col-sm-2 control-label">Upload Product</label>
+<div class="col-sm-10">
+<div class="form-control file-input dark-browse-input-box">
+<label for="inputFile-2">
+<span class="btn btn-danger dark-input-button">
+<input type="file" id="inputFile-2" onchange="this.parentNode.parentNode.nextElementSibling.value = this.value">
+<i class="fa fa-file-archive-o"></i>
+</span>
+</label>
+<input class="file-name input-flat" type="text" readonly="readonly" placeholder="Browse Files">
+</div>
+</div>
+</div>-->
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">Food:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="b-name" placeholder="Name of the food item">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">Description:</label>
+                                                    <div class="col-sm-10">
+                                                        <textarea class="form-control" rows="3" id="b-details" placeholder="Ingredients or details about the food"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-sm-offset-2 col-sm-10">
+                                                        <button onclick="submitIt()" class="btn btn-lg btn-primary">Add Food</button>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                     </div>
-                                    <div class="form-group">
-                                       <label class="col-sm-2 control-label">Time End:</label>
-                                       <div class="col-sm-10">
-                                          <input type="text" class="form-control" id="b-available" placeholder="8 pm">
-                                       </div>
                                     </div>
-                                    <div class="form-group">
-                                       <div class="col-sm-offset-2 col-sm-10">
-                                          <button onclick="updateVal()" class="btn btn-lg btn-primary">Submit</button>
-                                       </div>
+                                </div><div class="card alert">
+                                <div class="card-header">
+                                    <h4>Edit Box:</h4>
+                                    <!--
+<div class="card-header-right-icon">
+<ul>
+<li class="card-close" data-dismiss="alert"><i class="ti-close"></i></li>
+<li class="doc-link"><a href="#"><i class="ti-link"></i></a></li>
+</ul>
+</div>-->
+                                </div>
+                                <div class="card-body">
+                                    <div class="menu-upload-form">
+                                        <div class="form-horizontal">
+                                            <!-- <div class="form-group">
+<label class="col-sm-2 control-label">Upload Product</label>
+<div class="col-sm-10">
+<div class="form-control file-input dark-browse-input-box">
+<label for="inputFile-2">
+<span class="btn btn-danger dark-input-button">
+<input type="file" id="inputFile-2" onchange="this.parentNode.parentNode.nextElementSibling.value = this.value">
+<i class="fa fa-file-archive-o"></i>
+</span>
+</label>
+<input class="file-name input-flat" type="text" readonly="readonly" placeholder="Browse Files">
+</div>
+</div>
+</div>-->
+
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">Price:</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="b-price" placeholder="$8.59">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">Time Start:</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="b-start" placeholder="3 pm">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">Time End:</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="b-available" placeholder="8 pm">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">IMG File:</label>
+                                                <div class="col-sm-10">
+                                                    <input name="myFile" class="form-control" type="file" id = "fileinput">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-sm-offset-2 col-sm-10">
+                                                    <button onclick="updateVal()" class="btn btn-lg btn-primary">Submit</button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-									</div>
-                              </div>
-                           </div>
-                        </div>
-                                    <script>
+                                </div>
+                                </div>
+                                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                                <script>
+                                    var selectedfile;
+                                    $("#fileinput").on("change",function(event){
+                                        selectedfile = event.target.files[0];
+                                    });
                                     var opt;
                                     var zip = sessionStorage.getItem('zip');
                                     var name = sessionStorage.getItem('name');
-                                    
-    function removeObj(){
-    database.remove();
-    window.location.href="../foodmin/restaurant-boxes.html";
-    }
-    var config = {
-        apiKey: "AIzaSyCGAhEirtKDNysgXK5b4fYU4AHZlK2d2M8",
-        databaseURL: "https://profapp-e3c81.firebaseio.com/"
-    };
-    firebase.initializeApp(config);var database2 = firebase.database().ref().child('states').child('NJ').child(zip).child(name);
-    
-    var database = firebase.database().ref().child('states').child('NJ').child(zip).child(name).child("foodOptions");
-    
-	database.once('value').then(function(snapshot) {
-	var x = 0;
-    snapshot.forEach(function(userSnapshot) {
-	if(x == 0){
-	x++;
-	 document.getElementById("rreeeemove").outerHTML='';}
-        var username = userSnapshot.val();
-document.getElementById("box_container").innerHTML += '<div class="card alert row"><div class="card-header"><h4>' + username.name + ':</h4><div class="card-header-right-icon"><ul><li class="card-close" data-dismi ss="alert"><i class="ti-close" onclick="removeObj()"></i></li></ul></div></div><div class="card-body"><p>'+username.description+'</p><p></p></div></div>';
-    });
-    database2.once('value').then(function(snapshot) {
-var elements2 = document.getElementsByClassName("untiil");
-for(var i=0; i<elements2.length; i++) {
-    elements2[i].innerHTML = snapshot.val().timeStart + " to " + snapshot.val().timeEnd;
-}
 
-var elements = document.getElementsByClassName("priice");
-for(var i=0; i<elements.length; i++) {
-    elements[i].innerHTML = '$' + snapshot.val().priceOfBox;
-}
-    });
+                                    function removeObj(){
+                                        database.remove();
+                                        window.location.href="../foodmin/restaurant-boxes.html";
+                                    }
+                                    var config = {
+                                        apiKey: "AIzaSyCGAhEirtKDNysgXK5b4fYU4AHZlK2d2M8",
+                                        databaseURL: "https://profapp-e3c81.firebaseio.com/",
+                                        storageBucket : "profapp-e3c81.appspot.com"
+                                    };
+                                    firebase.initializeApp(config);
+                                    var database2 = firebase.database().ref().child('states').child('NJ').child(zip).child(name);
+
+                                    var database = firebase.database().ref().child('states').child('NJ').child(zip).child(name).child("foodOptions");
+                                    database.once('value').then(function(snapshot) {
+                                        var x = 0;
+                                        snapshot.forEach(function(userSnapshot) {
+                                            if(x == 0){
+                                                x++;
+                                                document.getElementById("rreeeemove").outerHTML='';}
+                                            var username = userSnapshot.val();
+                                            document.getElementById("box_container").innerHTML += '<div class="card alert row"><div class="card-header"><h4>' + username.name + ':</h4><div class="card-header-right-icon"><ul><li class="card-close" data-dismi ss="alert"><i class="ti-close" onclick="removeObj()"></i></li></ul></div></div><div class="card-body"><p>'+username.description+'</p><p></p></div></div>';
+                                        });
+                                        database2.once('value').then(function(snapshot) {
+                                            var elements2 = document.getElementsByClassName("untiil");
+                                            for(var i=0; i<elements2.length; i++) {
+                                                elements2[i].innerHTML = snapshot.val().timeStart + " to " + snapshot.val().timeEnd;
+                                            }
+
+                                            var elements = document.getElementsByClassName("priice");
+                                            for(var i=0; i<elements.length; i++) {
+                                                elements[i].innerHTML = '$' + snapshot.val().priceOfBox;
+                                            }
+                                            var imageElements = document.getElementsByClassName("box-image");
+                                            imageElements[0].src = snapshot.val().imageURL;  
+                                        });
                                     });
                                     function updateVal(){
-  var otherData = {
-    priceOfBox: document.getElementById("b-price").value,
-    timeStart: document.getElementById("b-start").value,
-    timeEnd: document.getElementById("b-available").value
-  };
- var key2 = database2.update(otherData);
-  window.location.href = "./restaurant-boxes.html";
-									}
-                                    function submitIt(){
-                                    // A post entry.
-  var postData = {
-    name: document.getElementById("b-name").value,
-    description: document.getElementById("b-details").value,
-  };
-
-  // Get a key for a new Post.
-  var key = database.push(postData);
- // var key2 = database2.update(otherData);
-  window.location.href = "./restaurant-boxes.html";
+                                        var otherData = {
+                                            priceOfBox: document.getElementById("b-price").value,
+                                            timeStart: document.getElementById("b-start").value,
+                                            timeEnd: document.getElementById("b-available").value
+                                        };
+                                        var key2 = database2.update(otherData);
+                                        var storageRef = firebase.storage().ref('foodImages/' + selectedfile.name);
+                                        var uploadImage = storageRef.put(selectedfile);
+                                        uploadImage.on('state_changed', function(snapshot){
+                                            // Observe state change events such as progress, pause, and resume
+                                            // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+                                            var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                                            console.log('Upload is ' + progress + '% done');
+                                            switch (snapshot.state) {
+                                                case firebase.storage.TaskState.PAUSED: // or 'paused'
+                                                    console.log('Upload is paused');
+                                                    break;
+                                                case firebase.storage.TaskState.RUNNING: // or 'running'
+                                                    console.log('Upload is running');
+                                                    break;
+                                            }
+                                        }, function(error) {
+                                            // Handle unsuccessful uploads
+                                            console.log(error);
+                                        }, function() {
+                                            // Handle successful uploads on complete
+                                            // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+                                            var url = {
+                                                imageURL : uploadImage.snapshot.downloadURL
+                                            };
+                                            var key3 = database2.update(url);
+                                        });
+                                        setTimeout(function (){
+                                          window.location.href = "./restaurant-boxes.html";
+                                        }, 5000);
                                     }
-                                    </script>
-                        <!-- /# card -->
-                     
-					 </div>
-                     <!-- /# column -->
-                  </div>
-                  <!-- /# row -->
-               </div>
-               <!-- /# main content -->
+                                    function submitIt(){
+                                        // A post entry.
+                                        var postData = {
+                                            name: document.getElementById("b-name").value,
+                                            description: document.getElementById("b-details").value,
+                                        };
+
+                                        // Get a key for a new Post.
+                                        var key = database.push(postData);
+                                        // var key2 = database2.update(otherData);
+                                        window.location.href = "./restaurant-boxes.html";
+                                    }
+                                    function updateImage(){
+                                        database2.once('value').then(function(snapshot) {
+                                            var elements2 = document.getElementsByClassName("untiil");
+                                            for(var i=0; i<elements2.length; i++) {
+                                                elements2[i].innerHTML = snapshot.val().timeStart + " to " + snapshot.val().timeEnd;
+                                            }
+
+                                            var elements = document.getElementsByClassName("priice");
+                                            for(var i=0; i<elements.length; i++) {
+                                                elements[i].innerHTML = '$' + snapshot.val().priceOfBox;
+                                            }
+                                            var imageElements = document.getElementsByClassName("box-image");
+                                            imageElements[0].src = snapshot.val().imageURL;
+
+                                        });
+                                    }
+                                </script>
+                                <!-- /# card -->
+
+                            </div>
+                            <!-- /# column -->
+                        </div>
+                        <!-- /# row -->
+                    </div>
+                    <!-- /# main content -->
+                </div>
+                <!-- /# container-fluid -->
             </div>
-            <!-- /# container-fluid -->
-         </div>
-         <!-- /# main -->
-      </div>
-      <!-- /# content wrap -->
-      <script src="assets/js/lib/jquery.min.js"></script><!-- jquery vendor -->
-      <script src="assets/js/lib/jquery.nanoscroller.min.js"></script><!-- nano scroller -->
-      <script src="assets/js/lib/sidebar.js"></script><!-- sidebar -->
-      <script src="assets/js/lib/bootstrap.min.js"></script><!-- bootstrap -->
-      <script src="assets/js/lib/mmc-common.js"></script>
-      <script src="assets/js/lib/mmc-chat.js"></script>
-      <script src="assets/js/scripts.js"></script><!-- scripit init-->
-   </body>
+            <!-- /# main -->
+        </div>
+        <!-- /# content wrap -->
+        <script src="assets/js/lib/jquery.min.js"></script><!-- jquery vendor -->
+        <script src="assets/js/lib/jquery.nanoscroller.min.js"></script><!-- nano scroller -->
+        <script src="assets/js/lib/sidebar.js"></script><!-- sidebar -->
+        <script src="assets/js/lib/bootstrap.min.js"></script><!-- bootstrap -->
+        <script src="assets/js/lib/mmc-common.js"></script>
+        <script src="assets/js/lib/mmc-chat.js"></script>
+        <script src="assets/js/scripts.js"></script><!-- scripit init-->
+    </body>
 </html>

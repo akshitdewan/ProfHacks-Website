@@ -3224,3 +3224,10 @@ p {
 .w12pr {
   width: 12%;
 }
+
+.box-image {
+    display: none;
+}
+.box-image[src] {
+    display : block;
+}
